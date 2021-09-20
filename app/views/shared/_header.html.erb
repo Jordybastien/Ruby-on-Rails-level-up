@@ -1,0 +1,32 @@
+<nav class="navbar is-link">
+  <div class="container">
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <%= link_to root_path, class:"navbar-item" do%>
+          <span class="has-text-weight-bold is-size-4 ml -4"></span>
+        <% end %>
+        <a class="navbar-item">
+          Documentation
+        </a>
+      </div>
+
+      <div class="navbar-end">
+        <%= link_to "Create new entry", new_entry_path, class:"button is-success" %>
+        <%# <span class="navbar-item">
+            <%= link_to new_entry_path, class:"button is-success" do %>
+           <%# <span>Create new entry</span>
+            <% end %>
+        <%#</span> %>
+      </div>
+    </div>
+  </div>
+</nav>
+<div>
+    <h1 class="title">
+        <% if content_for(:title) %>
+            <%= yield :title %> 
+        <% else %>
+            Foodlog
+        <% end %>
+    </h1>
+</div>
